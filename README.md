@@ -62,7 +62,7 @@ for complete graph for any $n < N(N-1)/2$.
 
 Focus on the inner term for a given matching $\pi$,
 
-$$f(\pi, x, y)^n = \left( \sum_{i=0}^{N-1} x^i y^{\pi(i)} \right)^n = \sum_{k} \frac{n!}{k_0! k_1! \dots k_{N-1}!} \prod_{i=0}^{N-1} \left( x^i y^{\pi(i)} \right)^{k_i}$$ 
+$$f(\pi, x, y)^n = {\left( \sum_{i=0}^{N-1} x^i y^{\pi(i)} \right)}^n = \sum_{k} \frac{n!}{k_0! k_1! \dots k_{N-1}!} \prod_{i=0}^{N-1} \left( x^i y^{\pi(i)} \right)^{k_i}$$ 
 
 where the sum is over all partitions $k = (k_0, \dots, k_{N-1})$ such that $\sum k_i = n$.
 
