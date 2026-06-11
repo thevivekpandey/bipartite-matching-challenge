@@ -3,7 +3,8 @@
 This document is in three parts
 1. Description of the challenge
 2. Why solving this problem is important
-3. My experience solving this problem
+3. My attempts solving the problem (pre LLMs)
+4. LLM attempts at solving the problem
 4. Suggestions for the sailors
 
 ## Description of the challenge
@@ -97,7 +98,7 @@ $$\frac{n!}{1! 2! \dots (N-1)!} \prod_{i=0}^{N-1} \left( x^i y^i \right)^i$$
 will not cancel (This term will arise only via the identity permutation) and thus $g(n, x, y)$ will not be identically 0.
 
 ### Rank of graph decomposable into complete graphs
-Let's consider a bipartite graph $G$ = $(U, V, E)$ such that it can be decomposed into $k$ \textit{complete} subgraphs 
+Let's consider a bipartite graph $G$ = $(U, V, E)$ such that it can be decomposed into $k$ _complete_ subgraphs 
 $(U_1, V_1, E_1), (U_2, V_2, E_2), \dots, (U_k, V_k, E_k)$  
 such that 
 $U_1 \cup U_2 \cup \dots \cup U_k = U$, 
@@ -106,7 +107,7 @@ $E_1 \cup E_2 \cup \dots \cup E_k = E$
 
 then $rank(G) = \binom{N_1}{2} + \binom{N_2}{2} + \dots + \binom{N_k}{2}$
 
-where $N_i = |U_i| = |V_i|$ for $i = 1, \dots, k$
+where $N_i = \lvert U_i\rvert = \vert V_i\rvert$ for $i = 1, \dots, k$
 
 ### Attempts by AI models
 Once the LLMs arrived on the scene, and we started receiving reports of them solving 
