@@ -54,9 +54,4 @@ theorem rank_le_choose_two
     rank E ≤ ((N * (N - 1) / 2 : ℕ) : ℕ∞) := by
   sorry
 
-/-- The complete bipartite graph `K_{N,N}`: every vertex in U is connected to
-    every vertex in V. -/
-def IsCompleteBipartite (E : Fin N → Fin N → Prop) : Prop :=
-  ∀ i j, E i j
-
 end BipartiteRank

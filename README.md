@@ -7,7 +7,7 @@ This document is in three parts
 
 ## Description of the challenge
 
-Let $G = (U, V, E)$ be a bipartite graph with $\lvert U \rvert = \lvert V \rvert = N$, such that $G$ has at least one perfect matching. We label the vertices, both of $U$ and $V$ as $0, 1, \dots, N - 1$. This way, a perfect matching in $G$ can be represented by a permutation of $(0, 1, \dots, N - 1)$.
+Let $G = (U, V, E)$ be a bipartite graph with $\lvert U\rvert = \lvert V\rvert = N$, such that $G$ has at least one perfect matching. We label the vertices, both of $U$ and $V$ as $0, 1, \dots, N - 1$. This way, any perfect matching in $G$ can be represented by a permutation of $(0, 1, \dots, N - 1)$.
 
 Let $\pi_1, \pi_2, \dots, \pi_k$ denote all the perfect matchings in $G$. Given an integer $n > 0$, we define a bivariate polynomial $g$ as following
 
@@ -17,12 +17,11 @@ where
 
 $$f(x, y) = \sum_{j=0}^{N-1}x^jy^{\pi(j)}$$
 
-We define rank of the graph $G$, $rank(G)$ as $\infty$ if the smallest $n$ for which $g(n, x, y)$ is not identically $0.$
-
+We define rank of the graph $G$, as the smallest $n$ for which $g(n, x, y)$ is not identically $0$.
 
 Prove that $rank(G) \le \frac{N(N-1)}{2}$, or provide a counterexample.
 
-The formal problem description in Lean4 is here. You need to complete the theorem \texttt{rank\_le\_choose\_two}, whose body currently consists of a single \texttt{sorry}.
+The formal problem description in Lean4 is [here](./BipartiteMatching.lean). You need to complete the theorem `rank_le_choose_two`, whose body currently consists of a single \texttt{sorry}.
 
 Send your proof as a pull request. I will confirm the proof before merging it to the repo. Or else send a description of the counterexample graph.
 
