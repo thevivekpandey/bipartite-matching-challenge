@@ -38,9 +38,9 @@ has a
 
 Several related results have been obtained. Specifically, 
 
-- Bipartite matching is known to be in RNC
-- Bipartite matching is known to be in quasi NC
-- Bipartite matching on planar graphs is known to be in NC
+- Bipartite matching is known to be in RNC (https://www.math.ias.edu/~avi/PUBLICATIONS/MYPAPERS/KUW86/KarpUW86.pdf)
+- Bipartite matching is known to be in quasi NC (https://arxiv.org/pdf/1601.06319)
+- Bipartite matching on planar graphs is known to be in NC (https://arxiv.org/html/2405.18833v1)
 
 However, the said result (Bipartite matching being in NC) has not been proven or disproven.
 
