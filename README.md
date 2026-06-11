@@ -79,9 +79,9 @@ $$
 \begin{equation}
 \pi'(r) = 
 \begin{cases} 
-\pi(j) & \text{if } r=i \\
-\pi(i) & \text{if } r=j \\
-\pi(r) & \text{otherwise}
+& \pi(j) & \text{if } r=i \\
+& \pi(i) & \text{if } r=j \\
+& \pi(r) & \text{otherwise}
 \end{cases}
 \end{equation}
 $$
