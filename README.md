@@ -54,13 +54,17 @@ I first encountered this problem during my senior thesis. My partner, Ajay Verma
 ### Rank of complete bipartite graph is $\binom{n}{2}$
 We did prove the conjecture for some categories of the graphs. In particularly, we proved that for complete bipartite graphs, the rank is precisely $N(N-1)/2$. This proof is relevant instructive, so let's go through it right here.
 
-Consider $$g(n, x, y) = \sum_{i=1}^{k} (-1)^{\text{parity}(\pi_i)} [f(\pi_i, x, y)]^n$$
+Consider 
+
+$$g(n, x, y) = \sum_{i=1}^{k} (-1)^{\text{parity}(\pi_i)} [f(\pi_i, x, y)]^n$$
 
 for complete graph for any $n < N(N-1)/2$.
 
 Focus on the inner term for a given matching $\pi$,
 
-$$f(\pi, x, y)^n = \left( \sum_{i=0}^{N-1} x^i y^{\pi(i)} \right)^n = \sum_{k} \frac{n!}{k_0! k_1! \dots k_{N-1}!} \prod_{i=0}^{N-1} \left( x^i y^{\pi(i)} \right)^{k_i}$$ where the sum is over all partitions $k = (k_0, \dots, k_{N-1})$ such that $\sum k_i = n$.
+$$f(\pi, x, y)^n = \left( \sum_{i=0}^{N-1} x^i y^{\pi(i)} \right)^n = \sum_{k} \frac{n!}{k_0! k_1! \dots k_{N-1}!} \prod_{i=0}^{N-1} \left( x^i y^{\pi(i)} \right)^{k_i}$$ 
+
+where the sum is over all partitions $k = (k_0, \dots, k_{N-1})$ such that $\sum k_i = n$.
 
 We will show that each of these $k$ terms inside summation sign cancel out.
 
