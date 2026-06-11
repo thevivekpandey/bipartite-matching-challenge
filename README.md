@@ -27,7 +27,7 @@ The formal problem description in Lean4 is [here](./BipartiteMatching.lean). You
 
 Send your proof as a pull request. Or else send a description of the counterexample graph.
 
-The first person to send a correct proof or counterexample before Dec 31, 2026 would be awarded USD 2000.
+The first person to send a correct proof or counterexample before Dec 31, 2026 would be awarded USD 1500.
 
 ## Why solving this problem is important
 
@@ -113,7 +113,7 @@ where $N_i = \lvert U_i\rvert = \lvert V_i\rvert$ for $i = 1, \dots, k$
 Once the LLMs arrived on the scene, and we started receiving reports of them solving 
 hitherto unsolved problems, I started to give it a try. As of June 10, 2026, no model was able to solve the problem. Here I describe my attempts with various models.
 
-First I tried the models to get to prove that for complete graph $rank(G) = N(N-1)/2$, both in English and then in Lean4. Here is the performance
+First I tried the models to get to prove that for complete graph $rank(G) = N(N-1)/2$, both in English and then in Lean4. This is quite easy, and as discussed above, I know its proof. Here is the performance
 
 ### Performance on rank for complete bipartite graph
 
@@ -127,9 +127,9 @@ First I tried the models to get to prove that for complete graph $rank(G) = N(N-
 
 So, for this simpler problem, English proof was emitted by all the models, but only codex and claude fable were able to successfully translate the proof to lean4. So, claude fable is indeed better than claude opus here. But codex is competitive.
 
-I also tried [Arisotle](https://aristotle.harmonic.fun/) which is a tool specifically to generate Lean proofs. Aristotle worked overnight, but by the morning it gave [partial proof](aristotle_attempt.lean) and gave up. For a tool specifically for formal math, I was mildely disappointed.
+I also tried [Arisotle](https://aristotle.harmonic.fun/) which is a tool specifically to generate Lean proofs. Aristotle worked overnight, but by the morning it gave [partial proof](aristotle_attempt.lean) and gave up. For a tool specifically for formal math, I was mildly disappointed.
 
-### Performance on rank for general bipartite graph (with |U| = |V|)*
+### Performance on rank for general bipartite graph (with |U| = |V|)
 Then I tried the models to prove general theorem, both in English and in Lean4.
 
 | Model | English Proof| Lean4 Proof |
@@ -142,7 +142,7 @@ Then I tried the models to prove general theorem, both in English and in Lean4.
 As you can see, call all the models have failed here (and that's why I have created this challenge).
 Here are a few details about my attempts.
 
-Claude/OpenAI open models _did not hallucinate_. They tried hard to solve the problem and then admitted that they have not been able to solve the problem. In some cases, they reported partial progress that they could make, and pointed to future directions that could be taken. See the screenshots below.
+Claude and OpenAI open models _did not hallucinate_. They tried hard to solve the problem and then admitted that they have not been able to solve the problem. In some cases, they reported partial progress that they could make, and pointed to future directions that could be taken. See the screenshots below.
 
 Claude (Fable here) tells the progress, the gap and future line of attack:
 
@@ -152,7 +152,7 @@ Codex says that evidence is strong, but it does not have proof:
 
 <img src="codex.png" width="600">
 
-However, Gemini repeatedly proposed incorrect solutions. I needed to spend effort in find holes in its argument (which were not deep really - a hobbyist mathematician like me could spot the errors). Every time I found mistake in the argument, it would accept its mistake and commend me for my sharp observation, and then go on to make next mistake.
+However, Gemini repeatedly proposed incorrect solutions. I needed to spend effort in find holes in its argument (which were not deep really - a hobbyist mathematician like me could spot the errors). Every time I found mistake in the argument, it would accept its mistake and commend me for my sharp observation, and then go on to given another proof with another mistake.
 
 It feels good to be flattered by Gemini:
 
@@ -167,3 +167,8 @@ we missed something elementary. However, given the elegance of the result, I con
 to construct, and hence I hope that with suitable prompting, or else combining the state of the art models with specialized provers should 
 ultimately work out. Hence, this challenge.
 
+## Suggestions for the sailors
+If you are interested in attempting to solve the problem, I encourage you first solve the similar problem of proving
+that the rank of complete bipartite graph is $\choose{n}{2}$. A standalone file with this theorem stated is [here](./CompleteGraph.lean). If a model cannot give lean proof for this theorem then there is no hope for proving the general statement.
+
+Good luck!
