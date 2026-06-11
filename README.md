@@ -107,7 +107,7 @@ $E_1 \cup E_2 \cup \dots \cup E_k = E$
 
 then $rank(G) = \binom{N_1}{2} + \binom{N_2}{2} + \dots + \binom{N_k}{2}$
 
-where $N_i = \lvert U_i\rvert = \vert V_i\rvert$ for $i = 1, \dots, k$
+where $N_i = \lvert U_i\rvert = \lvert V_i\rvert$ for $i = 1, \dots, k$
 
 ### Attempts by AI models
 Once the LLMs arrived on the scene, and we started receiving reports of them solving 
