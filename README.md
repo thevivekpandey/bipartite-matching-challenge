@@ -31,9 +31,9 @@ The first person to send a correct proof or counterexample before Dec 31, 2026 w
 ## Why solving this problem is important
 
 Bipartite matching problem is the problem of determining whether if 
-(bipartite graph) [https://en.wikipedia.org/wiki/Bipartite\_graph]
+[bipartite graph] (https://en.wikipedia.org/wiki/Bipartite\_graph)
 has a 
-(perfect matching) (https://en.wikipedia.org/wiki/Perfect\_matching). It is an open problem if bipartite matching is in complexity class NC.
+[perfect matching] (https://en.wikipedia.org/wiki/Perfect\_matching). It is an open problem if bipartite matching is in complexity class NC.
 
 Several close results have been obtained. Specifically, 
 
