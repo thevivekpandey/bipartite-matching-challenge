@@ -162,5 +162,6 @@ But repeated flattery becomes banal:
 
 As a final note, it is comforting to see that a basic prompting does not yield the solution to the problem. Hence, it is not the case that
 we missed something elementary. However, given the elegance of the result, I continue to believe that the proof should not be too hard 
-to construct, and hence I hope that with suitable prompting, or else combining the state of the art models with specialized proves shoule be
-able to solve the problem. Hence, this challenge.
+to construct, and hence I hope that with suitable prompting, or else combining the state of the art models with specialized provers should 
+ultimately work out. Hence, this challenge.
+
