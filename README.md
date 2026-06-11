@@ -49,7 +49,7 @@ It can be shown (outside the scope of this article) that if we can prove that ra
 ## My attempts to solve this problem
 
 ### Initial encounter
-I first encountered this problem during my senior thesis. My partner (Ajay Verma) and I tried to solve this under the guidance of professors Manindra Agarwal and Somenath Biswas. In short 2 months or so we reached a stage where we "just" needed to prove the conjecture about the rank. We spent remaining 8 months, unsuccessfully, to prove the conjecture. It always appeared to us that we are missing something simple, but we could never get figure out what.
+I first encountered this problem during my senior thesis. My partner, Ajay Verma and I tried to solve this under the guidance of professors Manindra Agarwal and Somenath Biswas. In short 2 months or so we reached a stage where we "just" needed to prove the conjecture about the rank. We spent remaining 8 months trying to prove the conjecture. It always appeared to us that we are missing something simple, but we could never get figure out what. We did make some progress though.
 
 ### Rank of complete bipartite graph is $\binom{n}{2}$
 We did prove the conjecture for some categories of the graphs. In particularly, we proved that for complete bipartite graphs, the rank is precisely $N(N-1)/2$. This proof is relevant instructive, so let's go through it right here.
@@ -60,7 +60,7 @@ for complete graph for any $n < N(N-1)/2$.
 
 Focus on the inner term for a given matching $\pi$,
 
-$$f(\pi, x, y)^n = \left( \sum_{i=0}^{N-1} x^i y^{\pi(i)} \right)^n = \sum_{k} \frac{n!}{k_0! k_1! \dots k_{N-1}!} \prod_{i=0}^{N-1} \left( x^i y^{\pi(i)} \right)^{k_i}$$where the sum is over all partitions $k = (k_0, \dots, k_{N-1})$ such that $\sum k_i = n$.
+$$f(\pi, x, y)^n = \left( \sum_{i=0}^{N-1} x^i y^{\pi(i)} \right)^n = \sum_{k} \frac{n!}{k_0! k_1! \dots k_{N-1}!} \prod_{i=0}^{N-1} \left( x^i y^{\pi(i)} \right)^{k_i}$$ where the sum is over all partitions $k = (k_0, \dots, k_{N-1})$ such that $\sum k_i = n$.
 
 We will show that each of these $k$ terms inside summation sign cancel out.
 
