@@ -21,7 +21,7 @@ We define rank of the graph $G$, as the smallest $n$ for which $g(n, x, y)$ is n
 
 Prove that $rank(G) \le \frac{N(N-1)}{2}$, or provide a counterexample.
 
-The formal problem description in Lean4 is [here](./BipartiteMatching.lean). You need to complete the theorem `rank_le_choose_two`, whose body currently consists of a single \texttt{sorry}.
+The formal problem description in Lean4 is [here](./BipartiteMatching.lean). You need to complete the theorem `rank_le_choose_two`, whose body currently consists of a single `sorry`.
 
 Send your proof as a pull request. I will confirm the proof before merging it to the repo. Or else send a description of the counterexample graph.
 
@@ -30,9 +30,9 @@ The first person to send a correct proof or counterexample before Dec 31, 2026 w
 ## Why solving this problem is important
 
 Bipartite matching problem is the problem of determining whether if 
-[bipartite graph](https://en.wikipedia.org/wiki/Bipartite\_graph)
+[bipartite graph](https://en.wikipedia.org/wiki/Bipartite_graph)
 has a 
-[perfect matching](https://en.wikipedia.org/wiki/Perfect\_matching). It is an open problem if bipartite matching is in complexity class NC.
+[perfect matching](https://en.wikipedia.org/wiki/Perfect_matching). It is an open problem if bipartite matching is in complexity class NC.
 
 Several close results have been obtained. Specifically, 
 
