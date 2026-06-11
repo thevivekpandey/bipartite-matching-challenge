@@ -44,12 +44,12 @@ Several related results have been obtained. Specifically,
 
 However, the said result (Bipartite matching being in NC) has not been proven or disproven.
 
-It can be shown (outside the scope of this article) that if we can prove that rank of any graph with $n$ vertices on either side and having at least one bipartite matching is at most $n(n-1)/ 2$ (or for that matter, bounded by any polynomial in $n$), then bipartite matching would have been proven to be in NC. Alternatively, if we can disprove this conjecture, then this line of enquiry comes to a close, and there is no decision on bipartite matching being in NC.
+It can be shown (outside the scope of this article) that if we can prove that rank of any graph with $n$ vertices on either side and having at least one bipartite matching is at most $n(n-1)/2$ (or for that matter, bounded by any polynomial in $n$), then bipartite matching would have been proven to be in NC. Alternatively, if we can disprove this conjecture, then this line of enquiry comes to a close, and there is no decision on bipartite matching being in NC.
 
 ## My attempts to solve this problem
 
 ### Initial encounter
-I first encountered this problem during my senior thesis. My partner (Ajay Verma) and I tried to solve this under the guidance of professors Manindra Agarwal and Somenath Biswas. In short 2 months or so we reached from the problem the conjecture about the rank and spent remaining 8 months, unsuccessfully, to prove the conjecture. It always appeared to us that we are missing something simple, but we could never get figure out what.
+I first encountered this problem during my senior thesis. My partner (Ajay Verma) and I tried to solve this under the guidance of professors Manindra Agarwal and Somenath Biswas. In short 2 months or so we reached a stage where we "just" needed to prove the conjecture about the rank. We spent remaining 8 months, unsuccessfully, to prove the conjecture. It always appeared to us that we are missing something simple, but we could never get figure out what.
 
 ### Rank of complete bipartite graph is $\binom{n}{2}$
 We did prove the conjecture for some categories of the graphs. In particularly, we proved that for complete bipartite graphs, the rank is precisely $N(N-1)/2$. This proof is relevant instructive, so let's go through it right here.
@@ -154,3 +154,7 @@ But repeated flattery becomes banal:
 
 <img src="gemini_2.png" width="600">
 
+As a final note, it is comforting to see that a basic prompting does not yield the solution to the problem. Hence, it is not the case that
+we missed something elementary. However, given the elegance of the result, I continue to believe that the proof should not be too hard 
+to construct, and hence I hope that with suitable prompting, or else combining the state of the art models with specialized proves shoule be
+able to solve the problem. Hence, this challenge.
