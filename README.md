@@ -106,5 +106,41 @@ where $N_i = |U_i| = |V_i|$ for $i = 1, \dots, k$
 Once the LLMs arrived on the scene, and we started receiving reports of them solving 
 hitherto unsolved problems, I started to give it a try. As of June 10, 2026, no model was able to solve the problem. Here I describe my attempts with various models.
 
+First I tried the models to get to prove that for complete graph $rank(G) = N(N-1)/2$, both in English and then in Lean4. Here is the performance
+
+**Performance on rank for complete bipartite graph** 
+
+| Model | English Proof| Lean4 Proof |
+| --- | --- | --- |
+| Claude Opus | Done | Not successful |
+| Gemini Pro | Done| Not successful |
+| OpeanAI codex| Done | Successful |
+| Claude Fable | Done | Successful |
+
+So, for this simpler problem, English proof was emitted by all the models, but only codex and claude fable were able to successfully translate the proof to lean4. So, claude fable is indeed better than claude opus here. But codex is competitive.
 
 
+Then I tried the models to prove general theorem, both in English and in Lean4.
+
+| Model | English Proof| Lean4 Proof |
+| --- | --- | --- |
+| Claude Opus | Failed | Failed |
+| Gemini Pro | Failed| Failed |
+| OpeanAI codex| Failed | Failed |
+| Claude Fable | Failed | Failed |
+| Aristotle | - | Failed |
+
+As you can see, call all the models have failed here (and that's why I have created this challenge).
+Here are a few details about my attempts.
+
+Claude/OpenAI open models _did not hallucinate_. They tried hard to solve the problem and then admitted that they have not been able to solve the problem. In some cases, they reported partial progress that they could make, and pointed to future directions that could be taken. See the screenshots below.
+
+<img src="fable.png" width="200">laude (Fable here) struggles and finally gives up.
+
+<img src="codex.png" width="200">Codex struggles and finally gives up.
+
+However, Gemini repeatedly proposed incorrect solutions. I needed to spend effort in find holes in its argument (which were not deep really - a hobbyist mathematician like me could spot the errors). Every time I found mistake in the argument, it would accept its mistake and commend me for my sharp observation, and then go on to make next mistake.
+
+<img src="gemini1.png" width="200">It feels good to be flattered by Gemini...
+
+<img src="gemini2.png" width="200">But repeated flattery becomes banal.
