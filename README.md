@@ -94,9 +94,9 @@ However, when $n=N(N-1)/2$, then the term
 
 $$\frac{n!}{1! 2! \dots (N-1)!} \prod_{i=0}^{N-1} \left( x^i y^i \right)^i$$
 
-will not cancel and thus $g(n, x, y)$ will not be identically 0.
+will not cancel (This term will arise only via the identity permutation) and thus $g(n, x, y)$ will not be identically 0.
 
-### 
+### Rank of graph decomposable into complete graphs
 Let's consider a bipartite graph $G$ = $(U, V, E)$ such that it can be decomposed into $k$ \textit{complete} subgraphs 
 $(U_1, V_1, E_1), (U_2, V_2, E_2), \dots, (U_k, V_k, E_k)$  
 such that 
