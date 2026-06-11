@@ -121,8 +121,8 @@ First I tried the models to get to prove that for complete graph $rank(G) = N(N-
 | --- | --- | --- |
 | Claude Opus | Done | Not successful |
 | Gemini Pro | Done| Not successful |
-| OpeanAI codex| Done | Successful |
-| Claude Fable | Done | Successful |
+| OpeanAI codex| Done | [Successful](./CodexBipartite.lean) |
+| Claude Fable | Done | [Successful](./FableBipartite.lean) |
 | Aristotle | - | Failed |
 
 So, for this simpler problem, English proof was emitted by all the models, but only codex and claude fable were able to successfully translate the proof to lean4. So, claude fable is indeed better than claude opus here. But codex is competitive.
