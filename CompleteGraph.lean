@@ -45,14 +45,22 @@ noncomputable def g (E : Fin N → Fin N → Prop) [DecidableRel E] (n : ℕ) : 
 noncomputable def rank (E : Fin N → Fin N → Prop) [DecidableRel E] : ℕ∞ :=
   ⨅ n ∈ {m : ℕ | g E m ≠ 0}, (n : ℕ∞)
 
-/-- **Theorem.**  Every bipartite graph `G = (U, V, E)` with `|U| = |V| = N`
-    that admits at least one perfect matching satisfies
-    `rank G ≤ N (N - 1) / 2`   ( = `Nat.choose N 2`). -/
+/-- The complete bipartite graph `K_{N,N}`: every vertex in U is connected to
+    every vertex in V. -/
+def IsCompleteBipartite (E : Fin N → Fin N → Prop) : Prop :=
+  ∀ i j, E i j
 
-theorem rank_le_choose_two
+/-- **Theorem.**  The complete bipartite graph `K_{N,N}` has rank exactly
+    `N (N - 1) / 2`, achieving the upper bound. -/
+theorem rank_complete
     (E : Fin N → Fin N → Prop) [DecidableRel E]
-    (hpm : ∃ π : Equiv.Perm (Fin N), IsPerfectMatching E π) :
-    rank E ≤ ((N * (N - 1) / 2 : ℕ) : ℕ∞) := by
-  sorry
+    (hcomplete : IsCompleteBipartite E) :
+    rank E = ((N * (N - 1) / 2 : ℕ) : ℕ∞) := by
+  -- The complete bipartite graph has all permutations as perfect matchings
+  have all_matchings : ∀ π : Equiv.Perm (Fin N), IsPerfectMatching E π := by
+    intro π i
+    exact hcomplete i (π i)
+
+  sorry 
 
 end BipartiteRank

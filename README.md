@@ -109,13 +109,13 @@ then $rank(G) = \binom{N_1}{2} + \binom{N_2}{2} + \dots + \binom{N_k}{2}$
 
 where $N_i = \lvert U_i\rvert = \lvert V_i\rvert$ for $i = 1, \dots, k$
 
-### Attempts by AI models
+## Attempts by AI models
 Once the LLMs arrived on the scene, and we started receiving reports of them solving 
 hitherto unsolved problems, I started to give it a try. As of June 10, 2026, no model was able to solve the problem. Here I describe my attempts with various models.
 
 First I tried the models to get to prove that for complete graph $rank(G) = N(N-1)/2$, both in English and then in Lean4. Here is the performance
 
-**Performance on rank for complete bipartite graph** 
+### Performance on rank for complete bipartite graph
 
 | Model | English Proof| Lean4 Proof |
 | --- | --- | --- |
@@ -129,7 +129,7 @@ So, for this simpler problem, English proof was emitted by all the models, but o
 
 I also tried [Arisotle](https://aristotle.harmonic.fun/) which is a tool specifically to generate Lean proofs. Aristotle worked overnight, but by the morning it gave [partial proof](aristotle_attempt.lean) and gave up. For a tool specifically for formal math, I was mildely disappointed.
 
-**Performance on rank for general bipartite graph (with |U| = |V|)** 
+### Performance on rank for general bipartite graph (with |U| = |V|)*
 Then I tried the models to prove general theorem, both in English and in Lean4.
 
 | Model | English Proof| Lean4 Proof |
