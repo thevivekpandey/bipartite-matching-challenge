@@ -114,10 +114,13 @@ First I tried the models to get to prove that for complete graph $rank(G) = N(N-
 | Gemini Pro | Done| Not successful |
 | OpeanAI codex| Done | Successful |
 | Claude Fable | Done | Successful |
+| Aristotle | - | Failed |
 
 So, for this simpler problem, English proof was emitted by all the models, but only codex and claude fable were able to successfully translate the proof to lean4. So, claude fable is indeed better than claude opus here. But codex is competitive.
 
+I also tried [Arisotle](https://aristotle.harmonic.fun/) which is a tool specifically to generate Lean proofs. Aristotle worked overnight, but by the morning it gave [partial proof](aristotle_attempt.lean) and gave up. For a tool specifically for formal math, I was mildely disappointed.
 
+**Performance on rank for general bipartite graph (with |U| = |V|)** 
 Then I tried the models to prove general theorem, both in English and in Lean4.
 
 | Model | English Proof| Lean4 Proof |
@@ -126,7 +129,6 @@ Then I tried the models to prove general theorem, both in English and in Lean4.
 | Gemini Pro | Failed| Failed |
 | OpeanAI codex| Failed | Failed |
 | Claude Fable | Failed | Failed |
-| Aristotle | - | Failed |
 
 As you can see, call all the models have failed here (and that's why I have created this challenge).
 Here are a few details about my attempts.
@@ -151,4 +153,3 @@ But repeated flattery becomes banal:
 
 <img src="gemini_2.png" width="600">
 
-I also tried Arisotle which is a tool by 
