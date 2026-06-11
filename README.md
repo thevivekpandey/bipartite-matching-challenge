@@ -23,18 +23,20 @@ Prove that $rank(G) \le \frac{N(N-1)}{2}$, or provide a counterexample.
 
 The formal problem description in Lean4 is [here](./BipartiteMatching.lean). You need to complete the theorem `rank_le_choose_two`, whose body currently consists of a single `sorry`.
 
-Send your proof as a pull request. I will confirm the proof before merging it to the repo. Or else send a description of the counterexample graph.
+Send your proof as a pull request. Or else send a description of the counterexample graph.
 
 The first person to send a correct proof or counterexample before Dec 31, 2026 would be awarded USD 2000.
 
 ## Why solving this problem is important
+
+Above conjecture is closely tied to proving bipartite matching in [NC](https://en.wikipedia.org/wiki/NC_(complexity)).
 
 Bipartite matching problem is the problem of determining whether if 
 [bipartite graph](https://en.wikipedia.org/wiki/Bipartite_graph)
 has a 
 [perfect matching](https://en.wikipedia.org/wiki/Perfect_matching). It is an open problem if bipartite matching is in complexity class NC.
 
-Several close results have been obtained. Specifically, 
+Several related results have been obtained. Specifically, 
 
 - Bipartite matching is known to be in RNC
 - Bipartite matching is known to be in quasi NC
