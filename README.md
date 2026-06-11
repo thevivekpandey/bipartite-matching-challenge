@@ -49,10 +49,12 @@ It can be shown (outside the scope of this article) that if we can prove that ra
 ## My attempts to solve this problem
 
 ### Initial encounter
-I first encountered this problem during my senior thesis. My partner, Ajay Verma and I tried to solve this under the guidance of professors Manindra Agarwal and Somenath Biswas. In short 2 months or so we reached a stage where we "just" needed to prove the conjecture about the rank. We spent remaining 8 months trying to prove the conjecture. It always appeared to us that we are missing something simple, but we could never get figure out what. We did make some progress though.
+I first encountered this problem during my senior thesis. My partner, Ajay Verma and I tried to solve this under the guidance of professors Manindra Agarwal and Somenath Biswas. In short 2 months or so we reached a stage where we "just" needed to prove the conjecture about the rank. We spent remaining 8 months trying to prove the conjecture. It always appeared to us that we are missing something simple, but we could never get figure out what. 
+
+We did make some progress though, proving the conjecture for some categories of graphs.
 
 ### Rank of complete bipartite graph is $\binom{n}{2}$
-We did prove the conjecture for some categories of the graphs. In particularly, we proved that for complete bipartite graphs, the rank is precisely $N(N-1)/2$. This proof is relevant instructive, so let's go through it right here.
+We proved that for complete bipartite graphs, the rank is precisely $N(N-1)/2$. This proof is relevant and instructive, so let's go through it right here.
 
 Consider 
 
