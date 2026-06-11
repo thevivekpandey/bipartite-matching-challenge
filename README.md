@@ -135,12 +135,16 @@ Here are a few details about my attempts.
 
 Claude/OpenAI open models _did not hallucinate_. They tried hard to solve the problem and then admitted that they have not been able to solve the problem. In some cases, they reported partial progress that they could make, and pointed to future directions that could be taken. See the screenshots below.
 
-<img src="fable.png" width="200">laude (Fable here) struggles and finally gives up.
+<img src="fable.png" width="600">Claude (Fable here) tells the progress, the gap and future line of attack.
 
-<img src="codex.png" width="200">Codex struggles and finally gives up.
+<img src="codex.png" width="600">Codex says that evidence is strong, but it does not have proof.
 
 However, Gemini repeatedly proposed incorrect solutions. I needed to spend effort in find holes in its argument (which were not deep really - a hobbyist mathematician like me could spot the errors). Every time I found mistake in the argument, it would accept its mistake and commend me for my sharp observation, and then go on to make next mistake.
 
-<img src="gemini1.png" width="200">It feels good to be flattered by Gemini...
+<img src="gemini_1.png" width="600">
 
-<img src="gemini2.png" width="200">But repeated flattery becomes banal.
+It feels good to be flattered by Gemini...
+
+<img src="gemini_2.png" width="600">
+
+But repeated flattery becomes banal.
