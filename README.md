@@ -4,6 +4,7 @@ This document is in three parts
 1. Description of the challenge
 2. Why solving this problem is important
 3. My experience solving this problem
+4. Suggestions for the sailors
 
 ## Description of the challenge
 
@@ -70,7 +71,7 @@ where the sum is over all partitions $k = (k_0, \dots, k_{N-1})$ such that $\sum
 
 We will show that each of these $k$ terms inside summation sign cancel out.
 
-Since $n < N(N-1)/2$, for any given $k = (k_0, \dots, k_{N-1})$, not all $k_i$ will be unique. Take indexes $i$ and $j$, such that $k_i = k_j$. If there are multiple possibilities, take the pair with least $i$ 
+Since $n < N(N-1)/2$ and $\Sum k_i = n$, for any given $k = (k_0, \dots, k_{N-1})$, not all $k_i$ will be unique. Take indexes $i$ and $j$, such that $k_i = k_j$. If there are multiple possibilities, take the pair with least $i$ 
 
 Now consider a permutation $\pi'$ such that
 
