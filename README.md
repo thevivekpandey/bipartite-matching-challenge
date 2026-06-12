@@ -1,11 +1,12 @@
 # Bipartite Graph Matching Challenge
 
 This document is in five parts:
-1. Description of the challenge
-2. Why solving this problem is important
-3. My attempts solving the problem (pre LLMs)
-4. LLM attempts at solving the problem
-5. Suggestions for the sailors
+- Description of the challenge
+  + Award
+- Why solving this problem is important
+- My attempts solving the problem (pre LLMs)
+- LLM attempts at solving the problem
+- Suggestions for the sailors
 
 ## Description of the challenge
 
@@ -27,6 +28,7 @@ The formal problem description in Lean4 is [here](./BipartiteMatching.lean). You
 
 Send your proof as a pull request. Or else send a description of the counterexample graph.
 
+### Award
 The first person to send a correct proof or counterexample before Dec 31, 2026 would be awarded USD 1500.
 
 ## Why solving this problem is important
