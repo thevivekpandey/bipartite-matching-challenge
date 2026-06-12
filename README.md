@@ -20,7 +20,7 @@ where
 
 $$f(\pi, x, y) = \sum_{j=0}^{N-1}x^jy^{\pi(j)}$$
 
-We define _rank_ of the graph $G$, as the smallest $n$ for which $g(n, x, y)$ is not identically $0$.
+We define _rank_ of the graph $G$ as the smallest $n$ for which $g(n, x, y)$ is not identically $0$.
 
 Prove that $rank(G) \le \frac{N(N-1)}{2}$, or provide a counterexample.
 
