@@ -2,7 +2,7 @@
 
 This document is in five parts:
 - Description of the challenge
-  + Prize
+  + Prize for correct solution
 - Why solving this problem is important
 - My attempts solving the problem (pre LLMs)
 - LLM attempts at solving the problem
@@ -28,7 +28,7 @@ The formal problem description in Lean4 is [here](./BipartiteMatching.lean). You
 
 Send your proof as a pull request. Or else send a description of the counterexample graph.
 
-### Prize
+### Prize for correct solution
 The first person to send a correct proof or counterexample before Dec 31, 2026 would be awarded USD 1500.
 
 ## Why solving this problem is important
