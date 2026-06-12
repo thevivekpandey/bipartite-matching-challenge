@@ -26,7 +26,7 @@ Prove that $rank(G) \le \frac{N(N-1)}{2}$, or provide a counterexample.
 
 The formal problem description in Lean4 is [here](./BipartiteMatching.lean). You need to complete the theorem `rank_le_choose_two`, whose body currently consists of a single `sorry`.
 
-Send your proof as a pull request. Or else send a description of the counterexample graph.
+Send your proof as a pull request. Or else send a description of the counterexample graph. Reach me at `thevivekpandey@gmail.com` for any clarifications.
 
 ### Prize for correct solution
 The first person to send a correct proof or counterexample before Dec 31, 2026 would be awarded USD 1500.
