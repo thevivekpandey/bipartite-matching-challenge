@@ -17,9 +17,9 @@ $$g(n, x, y) = \sum_{i=1}^{k} (-1)^{\text{parity}(\pi_i)} [f(\pi_i, x, y)]^n$$
 
 where
 
-$$f(x, y) = \sum_{j=0}^{N-1}x^jy^{\pi(j)}$$
+$$f(\pi, x, y) = \sum_{j=0}^{N-1}x^jy^{\pi(j)}$$
 
-We define rank of the graph $G$, as the smallest $n$ for which $g(n, x, y)$ is not identically $0$.
+We define _rank_ of the graph $G$, as the smallest $n$ for which $g(n, x, y)$ is not identically $0$.
 
 Prove that $rank(G) \le \frac{N(N-1)}{2}$, or provide a counterexample.
 
@@ -31,12 +31,12 @@ The first person to send a correct proof or counterexample before Dec 31, 2026 w
 
 ## Why solving this problem is important
 
-The above conjecture is closely tied to proving bipartite matching in [NC](https://en.wikipedia.org/wiki/NC_(complexity)).
+The above conjecture is closely tied to proving bipartite matching in the complexity class [NC](https://en.wikipedia.org/wiki/NC_(complexity)).
 
 Bipartite matching problem is the problem of determining whether a
 [bipartite graph](https://en.wikipedia.org/wiki/Bipartite_graph)
 has a 
-[perfect matching](https://en.wikipedia.org/wiki/Perfect_matching). It is an open problem if bipartite matching is in complexity class NC.
+[perfect matching](https://en.wikipedia.org/wiki/Perfect_matching). It is an open problem if bipartite matching is in NC.
 
 Several related results have been obtained. Specifically, 
 
@@ -46,12 +46,12 @@ Several related results have been obtained. Specifically,
 
 However, this result (Bipartite matching being in NC) has not been proven or disproven.
 
-It can be shown (outside the scope of this article) that if we can prove that rank of any graph with $n$ vertices on either side and having at least one bipartite matching is at most $n(n-1)/2$ (or for that matter, bounded by any polynomial in $n$), then bipartite matching would be proven to be in NC. Alternatively, if we can disprove this conjecture, then this line of enquiry comes to a close, and there is no decision on bipartite matching being in NC.
+It can be shown (outside the scope of this article) that if we can prove that the rank of any graph with $n$ vertices on either side and having at least one bipartite matching is at most $n(n-1)/2$ (or for that matter, bounded by any polynomial in $n$), then bipartite matching would be proven to be in NC. Alternatively, if we can disprove this conjecture, then this line of enquiry comes to a close, and there is no decision on bipartite matching being in NC.
 
 ## My attempts to solve this problem
 
 ### Initial encounter
-I first encountered this problem during my senior thesis. My partner, Ajay Verma and I tried to solve this under the guidance of professors Manindra Agarwal and Somenath Biswas. In short 2 months or so we reached a stage where we "just" needed to prove the conjecture about the rank. We spent the remaining 8 months trying to prove the conjecture. It always appeared to us that we are missing something simple, but we could never figure out what. 
+I first encountered this problem of proving bipartite matching in NC during my senior thesis, in 2002. My partner, Ajay Verma and I tried to solve this under the guidance of professors Manindra Agarwal and Somenath Biswas. In short 2 months or so we reached a stage where we "just" needed to prove the conjecture about the rank. We spent the remaining 8 months trying to prove the conjecture. It always appeared to us that we are missing something simple, but we could never figure out what. 
 
 We did make some progress though, proving the conjecture for some categories of graphs.
 
@@ -72,7 +72,7 @@ where the sum is over all partitions $k = (k_0, \dots, k_{N-1})$ such that $\sum
 
 We will show that each of these $k$ terms inside summation the sign cancel out.
 
-Since $n < N(N-1)/2$ and $\sum k_i = n$, for any given $k = (k_0, \dots, k_{N-1})$, not all $k_i$ will be unique. Take indices $i$ and $j$, such that $k_i = k_j$. If there are multiple possibilities, take the pair with least $i$.
+Since $n < N(N-1)/2$ and $\sum k_i = n$, for any given $k = (k_0, \dots, k_{N-1})$, not all $k_i$ will be unique. Take indices $i$ and $j$, such that $k_i = k_j$. If there are multiple possibilities, take the pair with the least $i$.
 
 Now consider a permutation $\pi'$ such that
 
@@ -97,7 +97,7 @@ $$\frac{n!}{1! 2! \dots (N-1)!} \prod_{i=0}^{N-1} \left( x^i y^i \right)^i$$
 
 will not cancel (This term will arise only via the identity permutation) and thus $g(n, x, y)$ will not be identically 0.
 
-### Rank of graph decomposable into complete graphs
+### Rank of a graph decomposable into complete graphs
 Let's consider a bipartite graph $G$ = $(U, V, E)$ such that it can be decomposed into $k$ _complete_ subgraphs 
 $(U_1, V_1, E_1), (U_2, V_2, E_2), \dots, (U_k, V_k, E_k)$  
 such that 
@@ -109,11 +109,13 @@ then $rank(G) = \binom{N_1}{2} + \binom{N_2}{2} + \dots + \binom{N_k}{2}$
 
 where $N_i = \lvert U_i\rvert = \lvert V_i\rvert$ for $i = 1, \dots, k$
 
+I am omitting the proof, it is not too difficult with the same ideas as in the previous proof.
+
 ## Attempts by AI models
 Once the LLMs arrived on the scene, and we started receiving reports of them solving 
 previously unsolved problems, I decided to give them a try. As of June 10, 2026, no model was able to solve the problem. Here I describe my attempts with various models.
 
-First I tried the models to get to prove that for complete graph $rank(G) = N(N-1)/2$, both in English and then in Lean4. This is quite easy, and as discussed above, I know its proof. Here is the performance
+First I tried the models to get to prove the simpler problem that for complete graph $rank(G) = N(N-1)/2$, both in English and then in Lean4. This is quite easy, and as discussed above, I know its proof. Here is the performance
 
 ### Performance on rank for complete bipartite graph
 
@@ -129,8 +131,8 @@ So, for this simpler problem, English proof was provided by all the models, but 
 
 I also tried [Aristotle](https://aristotle.harmonic.fun/) which is a tool specifically to generate Lean proofs. Aristotle worked overnight, but by the morning it gave [partial proof](aristotle_attempt.lean) and gave up. For a tool specifically for formal math, I was mildly disappointed.
 
-### Performance on rank for general bipartite graph (with |U| = |V|)
-Then I tried the models to prove the general theorem, both in English and in Lean4.
+### Performance on proving the general theorem
+Then I tried the models to prove the general theorem, both in English and in Lean4. This is the real deal.
 
 | Model | English Proof| Lean4 Proof |
 | --- | --- | --- |
